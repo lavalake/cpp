@@ -1,0 +1,4 @@
+1. iterator
+That usage of operator+ is only provided for random-access iterators. set iterators are bi-directional iterators.
+
+But the function std::advance can be used to move any iterator a certain number of places:
