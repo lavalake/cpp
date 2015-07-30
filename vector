@@ -28,3 +28,7 @@ void SwapAndPopAtIndex(ContainerType &container, size_t index)
 	//Pop the back of the container, deleting our old element.
 	container.pop_back();
 }
+
+
+2.
+Only slightly true: a std::set iterator is invalidated only if the item to which it refers is removed from the set: you can insert any item, and remove any item but one
