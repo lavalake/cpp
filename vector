@@ -32,3 +32,20 @@ void SwapAndPopAtIndex(ContainerType &container, size_t index)
 
 2.
 Only slightly true: a std::set iterator is invalidated only if the item to which it refers is removed from the set: you can insert any item, and remove any item but one
+
+3. find
+
+
+If your vector is not ordered, use the approach MSN suggested:
+
+if(std::find(vector.begin(), vector.end(), item)!=vector.end()){
+      // Find the item
+}
+
+If your vector is ordered, use binary_search method Brian Neal suggested:
+
+if(binary_search(vector.begin(), vector.end(), item)){
+     // Find the item
+}
+
+binary search yields O(log n) worst-case performance, which is way more efficient than the first approach. In order to use binary search, you may use qsort to sort the vector first to guarantee it is ordered.
