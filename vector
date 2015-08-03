@@ -48,4 +48,15 @@ if(binary_search(vector.begin(), vector.end(), item)){
      // Find the item
 }
 
+
 binary search yields O(log n) worst-case performance, which is way more efficient than the first approach. In order to use binary search, you may use qsort to sort the vector first to guarantee it is ordered.
+
+
+
+4. insert
+   vector::insert(iterator, value)
+   note: the first param is an iterator, not index
+  
+5. reverse
+	no reverse method for vector. should use algorithm
+	reverse(interator,iterator)
