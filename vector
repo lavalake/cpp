@@ -35,6 +35,7 @@ Only slightly true: a std::set iterator is invalidated only if the item to which
 
 3. find
 
+find is upper exclusive [start,end)!!!!!!
 
 If your vector is not ordered, use the approach MSN suggested:
 
@@ -60,3 +61,7 @@ binary search yields O(log n) worst-case performance, which is way more efficien
 5. reverse
 	no reverse method for vector. should use algorithm
 	reverse(interator,iterator)
+
+6. init
+	vector<int> val(size)
+	vector must be initilaze before use index to assign!!!!!!!!!!!!!!
