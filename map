@@ -1,0 +1,14 @@
+1. insert
+single element (1)	pair<iterator,bool> insert (const value_type& val);
+
+with hint (2)	iterator insert (iterator position, const value_type& val);
+
+range (3)	template <class InputIterator>
+  void insert (InputIterator first, InputIterator last);
+Note!!!!!if the key is already in the map, the insert will not insert the pair and return the existing pair.!!!!!!!!
+!!!!!!!!!!!!!!!
+Note:Because element keys in a map are unique, the insertion operation checks whether each inserted element
+has a key equivalent to the one of an element already in the container, and if so, the element is not inserted,
+returning an iterator to this existing element (if the function returns a value).
+
+  
