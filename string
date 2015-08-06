@@ -1,2 +1,6 @@
 http://itec.hust.edu.cn/~liuwei/common-cpp/text_book/chapter18.pdf
 http://h41361.www4.hp.com/cplus/iostream.pdf
+1. substr
+basic_string substr (size_type pos = 0, size_type len = npos) const;
+he substring is the portion of the object that starts at character 
+position pos and spans len characters (or until the end of the string, whichever comes first).
