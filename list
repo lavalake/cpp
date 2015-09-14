@@ -1,0 +1,11 @@
+1. remove vs erase
+There are a few issues with your code above. 
+Firstly, the remove will invalidate any iterators that are pointing at the removed elements. 
+You then go on to continue using the iterator. It is difficult to tell which element(s) 
+remove would erase in the general case (although not in yours) since it can remove more than one.
+
+Secondly, you are probably using the wrong method. 
+Remove will iterate through all of the items in the list looking for any matching elements - 
+this will be inefficient in your case because there is only one. It looks like you should use 
+the erase method, you probably only want to erase the item at the position of the iterator. 
+The good thing about erase is it returns an iterator which is at the next valid position. 
