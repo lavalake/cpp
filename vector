@@ -1,5 +1,6 @@
 Efficient way to erase an element from std::vector 
 http://www.gamedev.net/topic/665250-efficient-way-to-erase-an-element-from-stdvector/
+vecotr::erase(iterator ) will erase the position and move all the following element.
 Normally you use move-semantics to avoid the copies (for non-trivial types). std::swap() handles that for you, though a single std::move() would work.
 
  
@@ -65,3 +66,4 @@ binary search yields O(log n) worst-case performance, which is way more efficien
 6. init
 	vector<int> val(size)
 	vector must be initilaze before use index to assign!!!!!!!!!!!!!!
+7. vector\dequeu only has insert(iterator) erase(iterator)
